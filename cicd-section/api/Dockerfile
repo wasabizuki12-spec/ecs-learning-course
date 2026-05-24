@@ -1,6 +1,7 @@
 FROM public.ecr.aws/docker/library/gradle:jdk21 AS build
 WORKDIR /app
 COPY . /app
+RUN chmod +x gradlew
 RUN ./gradlew build
 
 FROM eclipse-temurin:21
