@@ -81,7 +81,7 @@ jobs:
 
       - name: Fill in the new image URI in the amazon ECS task definition
         id: render-task-def
-        uses: actions/amazon-ecs-render-task-definition@v1
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ${{ env.ECS_TASK_DEFINITION_API }}
           container-name: api
